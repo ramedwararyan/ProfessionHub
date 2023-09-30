@@ -41,8 +41,8 @@
             Choosing a career or finding a roadmap has always been a mess. Well
             !! PROFESSION HUB is here to help you.
           </p>
-          <a href="login.html">Sign Up</a>
-          <a href="login.html">Log In</a>
+          <a href="login.jsp">Sign Up</a>
+          <a href="login.jsp">Log In</a>
         </div>
       </div>
 
