@@ -43,7 +43,7 @@ public class login extends HttpServlet {
 			        String password = request.getParameter("password");
 
 			        if (loginDao.validate(email, password)) {
-			            RequestDispatcher dispatcher = request.getRequestDispatcher("neww.jsp");
+			            RequestDispatcher dispatcher = request.getRequestDispatcher("new.jsp");
 			            dispatcher.forward(request, response);
 			        } else {
 			            throw new Exception("Login not successful..");

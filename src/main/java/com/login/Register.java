@@ -48,7 +48,7 @@ public class Register extends HttpServlet {
 
         userDao.saveUser(user);
 
-        RequestDispatcher dispatcher = request.getRequestDispatcher("new.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("login.jsp");
         dispatcher.forward(request, response);
     }
 }
