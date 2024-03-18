@@ -1,0 +1,54 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set font family and background color */
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    padding: 20px; /* Add padding to body */
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color:whitesmoke
+}
+
+/* Style for question items */
+.question-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+/* Style for question ID */
+.question-item h3 {
+    margin-bottom: 10px;
+}
+
+/* Style for reply button */
+.question-item form {
+    text-align: center;
+}
+
+.question-item button {
+    display: block; /* Display button as block to place it below the title */
+    margin-top: 10px; /* Add margin-top to separate button from title */
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.question-item button:hover {
+    background-color: #0056b3;
+}

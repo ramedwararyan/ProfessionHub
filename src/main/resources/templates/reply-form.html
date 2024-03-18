@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Reply Form</title>
+	<link rel="stylesheet" th:href="@{/css/reply-form.css}">
+</head>
+
+<body>
+
+	<div id="main">
+		<div id="heading">
+			<h1><span th:text="${questionText}"></span></h1>
+		</div>
+		<hr>
+
+
+		<form id="replyForm" th:action="@{/answers/submit}" method="post">
+			<input type="hidden" id="questionId" name="questionId" th:value="${questionId}" />
+			<label for="answer">
+				<textarea id="answer" name="answer" cols="90" rows="20" placeholder="Your Answer..."
+					required></textarea><br>
+	</div>
+
+	<div class="que_btn">
+		<button type="submit">Submit</button>
+		<button>Cancel</button>
+	</div>
+
+	</form>
+
+</body>
+
+</html>

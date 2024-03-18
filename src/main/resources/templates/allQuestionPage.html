@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Questions</title>
+    <link rel="stylesheet"  th:href="@{/css/allquestion.css}">
+</head>
+<body>
+
+    <h2>All Questions</h2>
+
+   <div id="question-list">
+        <!-- Iterate over questions and display them -->
+        <div th:each="question : ${questions}" class="question-item">
+           
+            <p>Question: <b><span th:text="${question.questiontext}"></span></p></b>
+            <!-- Reply button -->
+            <form th:action="@{/questions/reply}" method="get">
+                <input type="hidden" name="questionId" th:value="${question.questionId}" />
+                <button type="submit">Reply</button>
+                
+            </form>
+             <a th:href="@{/questions/answers(questionId=${question.questionId})}">Show Answers</a>
+        </div>
+    </div>
+
+</body>
+</html>

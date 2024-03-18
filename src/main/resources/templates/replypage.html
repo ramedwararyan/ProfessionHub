@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Questions Page</title>
+</head>
+<body>
+
+<h2>Questions</h2>
+
+<!-- Display questions in a list -->
+<ul th:if="${not #lists.isEmpty(questions)}">
+    <li th:each="question : ${questions}">
+		
+        <p th:text="${question.questiontext}"></p>
+       
+    </li>
+</ul>
+
+ <form th:action="@{/answers/postAnswer}" th:object="${question}"  method="post">
+            <!-- Hidden input field for questionId -->
+         <input type="hidden" name="questionId" th:field="*{questionId}">
+            
+            <textarea name="answerText" placeholder="Your answer" required></textarea>
+            <button type="submit">Reply</button>
+        </form>
+
+<!-- Message for no questions available -->
+<p th:if="${#lists.isEmpty(questions)}">No questions available.</p>
+
+<a th:href="@{/questions/getAllQuestion}">Get All Users</a>
+<a th:href="@{/questions(id=${question.id})}">Get question</a>
+
+</body>
+</html>

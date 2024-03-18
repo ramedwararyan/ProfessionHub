@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+	<title>Document</title>
+	<link rel="stylesheet" href="style2.css" th:href="@{/css/style2.css}">
+</head>
+
+<body>
+	<div id="main">
+		<div id="navbar">
+			<img src="" alt="">
+			<a th:href="@{/explore3}">Ask Questions</a>
+			<a th:href="@{/profile}">Profile</a>
+			<a  th:href="@{/explore6}">Comments</a>
+			<a th:href="@{/questions/question}">More</a>
+
+
+			<div class="container">
+
+				<input type="text" id="jobField" placeholder="Enter job field" onkeyup="checkEnterKey(event)">
+
+
+				<div id="results">
+					<!-- Display search results here -->
+				</div>
+			</div>
+
+
+		</div>
+		<div id="hero">
+			<h1>Explore the Fields</h1>
+			<div id="courses">
+				<div id="course1">
+					<img src="img/engineering.png" alt="" srcset="">
+					<h5>engineering</h5>
+				</div>
+				<div id="course2">
+					<img src="img/defence.png" alt="" srcset="">
+					<h5>defence</h5>
+				</div>
+				<div id="course3">
+					<img src="img/3d animation.png" alt="" srcset="">
+					<h5>3d Animation</h5>
+				</div>
+
+			</div>
+			<div id="btn1">
+				<button th:onclick="window.location.href='/explore1'">Explore</button>
+			</div>
+			<div id="btn2">
+				<button>Explore</button>
+			</div>
+			<div id="btn3">
+				<button>Explore</button>
+			</div>
+		</div>
+		<hr>
+		<div id="bcontainer">
+			Connect with us
+		</div>
+		<div id="socials">
+			<a href="https://www.instagram.com/" target="_blank"><i class="ri-instagram-line"></i></a>
+			<a href="https://facebook.com/" target="_blank"><i class="ri-facebook-circle-line"></i></a>
+			<a href="https://twitter.com/?lang=en" target="_blank"><i class="ri-twitter-line"></i></a>
+			<a href="https://discord.com/" target="_blank"><i class="ri-discord-line"></i></a>
+			<a href="#"><i class="ri-mail-line"></i></a>
+		</div>
+		<div id="btext">
+			Profession hub is a website built by college students and is still under construction. &nbsp;Therefore we
+			are sorry in advance for any kind of inconvenience.
+		</div>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"
+		integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="script2.js" th:src="@{/js/script2.js}"></script>
+</body>
+
+</html>

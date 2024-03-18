@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "matter";
+    color: white;
+    background-color: #0f0d0d;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+#title h1 {
+    padding: 2vw 2vw;
+    letter-spacing: .4vw;
+    font-size: 4vw;
+    font-weight: 300;
+}
+
+#title button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 2.5vw 2vw;
+    border: 1.5px solid white;
+    font-size: 1.5vw;
+    border-radius: 50px;
+    padding: .8vw 1.5vw;
+}
+
+#title button:hover {
+    background-color: royalblue;
+    cursor: pointer;
+}
+
+#main{
+    width: 100%;
+    height: 100vh;
+}
+
+#main hr {
+    opacity: .5;
+}
+
+#main h3 {
+    margin: 2vw 2vw;
+    font-size: 4vw;
+    font-weight: 300;
+
+}
+
+.buttons button {
+    font-size: 1.5vw;
+    border-radius: 50px;
+    padding: .8vw 1.5vw;
+    margin: 0 2vw;
+    border: 1.5px solid white;
+}
+
+.vl {
+    border-left: 1.5px solid white;
+    height: 100%;
+    position: absolute;
+    left: 18%;
+    margin: 8.5vw 0;
+    top: 0;
+    opacity: .5;
+}
+
+.info #first_name{
+    position: absolute;
+    left: 30%;
+    top: 30%;
+}
+
+.info #fninput{
+    position: absolute;
+    left: 30%;
+    top: 35%;
+    background-color: white;
+    color: black;
+    border: none;
+    font-size: 1.5vw;
+    padding: .6vw 1vw;
+    border-radius: 20px;
+}
+.info #last_name{
+    position: absolute;
+    left: 60%;
+    top: 30%;
+}
+
+.info #lninput{
+    position: absolute;
+    left: 60%;
+    top: 35%;
+    background-color: white;
+    color: black;
+    border: none;
+    font-size: 1.5vw;
+    padding: .6vw 1vw;
+    border-radius: 20px;
+}
+.info #email{
+    position: absolute;
+    left: 60%;
+    top: 50%;
+}
+
+.info #email_input{
+    position: absolute;
+    left: 60%;
+    top: 55%;
+    background-color: white;
+    color: black;
+    border: none;
+    font-size: 1.5vw;
+    padding: .6vw 1vw;
+    border-radius: 20px;
+}
+.info #phone{
+    position: absolute;
+    left: 30%;
+    top: 50%;
+}
+
+.info #phid{
+    position: absolute;
+    left: 30%;
+    top: 55%;
+    background-color: white;
+    color: black;
+    border: none;
+    font-size: 1.5vw;
+    padding: .6vw 1vw;
+    border-radius: 20px;
+}
+
+.info #location{
+    position: absolute;
+    left: 30%;
+    top: 70%;
+}
+
+.info #loco{
+    position: absolute;
+    left: 30%;
+    top: 75%;
+    background-color: white;
+    color: black;
+    border: none;
+    font-size: 1.5vw;
+    padding: .6vw 1vw;
+    border-radius: 20px;
+}
+
+.info #P_Code{
+    position: absolute;
+    left: 60%;
+    top: 70%;
+}
+
+.info #postcode{
+    position: absolute;
+    left: 60%;
+    top: 75%;
+    background-color: white;
+    color: black;
+    border: none;
+    font-size: 1.5vw;
+    padding: .6vw 1vw;
+    border-radius: 20px;
+}
+.hero_left{
+    margin: 2vw 2vw;
+}
+.hero_left i{
+    font-size: 2vw;
+    
+}
+
+#row1{
+    display: flex;
+    cursor: pointer;
+}
+
+#row1 h4{
+    margin: .5vw 2vw;
+    font-size: 1.5vw;
+    font-weight: 100;
+    letter-spacing: .2vw;
+}
+
+#row2{
+    display: flex;
+    margin: 2vw 0;
+    cursor: pointer;
+}
+
+#row2 h4{
+    margin: .3vw 2vw;
+    font-size: 1.5vw;
+    font-weight: 100;
+    letter-spacing: .2vw;
+}
+
+#row3{
+    display: flex;
+    margin: 2vw 0;
+    cursor: pointer;
+}
+
+#row3 h4{
+    margin: .3vw 2vw;
+    font-size: 1.5vw;
+    font-weight: 100;
+    letter-spacing: .2vw;
+}
+
+#row4{
+    display: flex;
+    margin: 2vw 0;
+    cursor: pointer;
+}
+
+#row4 h4{
+    margin: .3vw 2vw;
+    font-size: 1.5vw;
+    font-weight: 100;
+    letter-spacing: .2vw;
+}
+
+.info button{
+    border: 1.5px solid white;
+    position: absolute;
+    left: 50%;
+    top: 90%;
+    font-size: 2vw;
+    padding: .5vw 2vw;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 300;
+}
+
+.info button:hover{
+    color: white;
+    background-color: royalblue;
+}

@@ -18,6 +18,7 @@ public class CustomUserDetail implements UserDetails {
 		this.user = user;
 	}
 
+	
 	public String getFullname() {
 		return user.getFullname();
 	}

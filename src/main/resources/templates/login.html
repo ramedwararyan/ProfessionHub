@@ -106,5 +106,25 @@
         </div>
       </div>
     </div>
+    <script>
+		
+		 var username = document.getElementById('username');
+
+    // Function to handle input event
+    function handleInput() {
+      // Get the value from the input field
+      var username = username.value;
+
+      // Store the username in localStorage
+      localStorage.setItem('username', username);
+    }
+
+    // Attach an input event listener to the input field
+    username.addEventListener('input', handleInput);
+		
+		
+
+
+	</script>
   </body>
 </html>

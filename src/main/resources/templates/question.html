@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>question</title>
+    <link rel="stylesheet" th:href="@{/css/question.css}">
+</head>
+
+<body>
+    <div id="main">
+        <div id="heading">
+            <h1>Raise Your Question ?</h1>
+        </div>
+        <hr>   
+        <form id="question_form" th:action="@{/questions/ask}" th:object="${question}" method="post">
+			
+            <textarea name="questiontext" id="questiontext" cols="90" rows="20" placeholder="Write your question here..."></textarea>
+                   
+        </div>  
+        
+         <div class="que_btn">
+             <button type="submit">Add Question</button>
+            <button>Cancel</button>            
+        </div>   
+         
+        </form>
+    </div>
+   <script th:src="@{/js/questionform.js}"></script>
+</body>
+ 
+</html>
