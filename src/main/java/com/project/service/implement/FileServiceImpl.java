@@ -1,5 +1,7 @@
 package com.project.service.implement;
 
+
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -7,20 +9,36 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Date;
+import java.util.UUID;
 
-import org.springframework.core.io.InputStreamResource;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.project.entities.FileEntity;
+import com.project.repo.FileRepository;
 import com.project.service.FileService;
+
+
 
 @Service
 public class FileServiceImpl implements FileService {
 
+	
+	
+	@Autowired
+	private ModelMapper modelMapper;
+	
+	 @Autowired
+	    private FileRepository fileRepository;
+
+	    @Override
+	    public void saveFileDetails(FileEntity fileEntity) {
+	        fileRepository.save(fileEntity);
+	    }
+	
 	@Override
 	public String uploadImage(String path, MultipartFile file) throws IOException {
 
@@ -29,11 +47,11 @@ public class FileServiceImpl implements FileService {
 		// abc.png
 
 		// random name generate file
-		// String randomID = UUID.randomUUID().toString();
-		// String fileName1 = randomID.concat(name.substring(name.lastIndexOf(".")));
+		String randomID = UUID.randomUUID().toString();
+		String fileName1 = randomID.concat(name.substring(name.lastIndexOf(".")));
 
 		// Full path
-		String filePath = path + File.separator + name;
+		String filePath = path + File.separator + fileName1;
 
 		// create folder if not created
 		File f = new File(path);
@@ -44,28 +62,16 @@ public class FileServiceImpl implements FileService {
 		// file copy
 
 		Files.copy(file.getInputStream(), Paths.get(filePath));
+		
+		
 
-		return name;
+		return fileName1;
 	}
 
 	@Override
 	public InputStream getResource(String path, String fileName) throws FileNotFoundException {
 		String fullPath = path + File.separator + fileName;
 		InputStream is = new FileInputStream(fullPath);
-
-		// Set response headers for PDF
-		HttpHeaders headers = new HttpHeaders();
-		headers.setContentType(MediaType.APPLICATION_PDF);
-
-		// Example: If you are using Spring MVC ResponseEntity
-		ResponseEntity<InputStreamResource> responseEntity = new ResponseEntity<>(new InputStreamResource(is), headers,
-				HttpStatus.OK);
-
-		// Example: If you are using Spring Boot Servlet
-		// response.setContentType("application/pdf");
-		// response.setHeader("Content-Disposition", "inline; filename=" + fileName);
-
-		// db logic to return InputStream
 		// db logic to return inpustream
 		return is;
 	}

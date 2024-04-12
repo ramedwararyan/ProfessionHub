@@ -3,6 +3,7 @@ package com.project.service;
 
 
 import com.project.entities.Questions;
+import com.project.entities.User;
 
 import java.util.List;
 import java.util.Optional;
@@ -15,7 +16,8 @@ public interface QuestionService {
 
     void addQuestion(Questions question);
 
-    // Add more methods as needed (e.g., deleteQuestion, updateQuestion, etc.)
+    List<Questions> getQuestionsByUserId(Long userId);
+   
 }
 
 

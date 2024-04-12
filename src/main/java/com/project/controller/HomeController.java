@@ -1,5 +1,8 @@
 package com.project.controller;
 
+import java.security.Principal;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -9,7 +12,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.project.dto.UserDto;
+import com.project.entities.DsMessage;
+import com.project.entities.Message;
 import com.project.entities.User;
+import com.project.repo.MessageRepository;
+import com.project.repo.MessageRepository2;
 import com.project.repo.UserRepository;
 import com.project.service.UserService;
 
@@ -19,6 +26,14 @@ public class HomeController {
 
 	@Autowired
 	private UserService userService;
+	
+	@Autowired
+	 private  MessageRepository messageRepository;
+
+	@Autowired
+	 private  MessageRepository2 messageRepository2;
+
+	  
 	
 	 @Autowired
 	    private UserRepository userRepository;
@@ -84,13 +99,53 @@ public class HomeController {
 	}
 	
 	@GetMapping("/explore6")
-	public String explore6 (Model model) {
+	public String explore6 (Model model,Principal principal) {
 		  UserDto userDto = userService.getCurrentUser();
 
 		    
 		  model.addAttribute("user", userDto);
-		
+		  String username = principal.getName();
+		    model.addAttribute("username", username);
+		    
+		    List<Message> messages = messageRepository.findAll();
+	        model.addAttribute("messages", messages);
 		return "chatcomment";
+	}
+	
+	
+	@GetMapping("/explore9")
+	public String explore9 () {
+		return "upload";
+	}
+	
+	
+	@GetMapping("/explore10")
+	public String explore10 () {
+		return "index6";
+	}
+	
+	@GetMapping("/explore11")
+	public String explore11 () {
+		return "chat";
+	}
+	
+	@GetMapping("/explore12")
+	public String explore12 () {
+		return "index7";
+	}
+	
+	@GetMapping("/explore13")
+	public String explore13 (Model model,Principal principal) {
+		  UserDto userDto = userService.getCurrentUser();
+
+		    
+		  model.addAttribute("user", userDto);
+		  String username = principal.getName();
+		    model.addAttribute("username", username);
+		    
+		    List<DsMessage> messages = messageRepository2.findAll();
+	        model.addAttribute("messages", messages);
+		return "chatcomment2";
 	}
 	
 	

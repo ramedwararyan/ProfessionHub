@@ -27,10 +27,6 @@ public class Answers {
     @JoinColumn(name = "questionId") 
     private Questions question;
 
-	public void setQuestions(Long questionId) {
-		// TODO Auto-generated method stub
-		
-	}
 
 	
 	   

@@ -13,15 +13,14 @@
 	<div id="main">
 		<div id="navbar">
 			<img src="" alt="">
-			<a th:href="@{/explore3}">Ask Questions</a>
+			<a th:href="@{/explore3}">Ask Questions</a>			
+			<a  th:href="@{/explore9}">Contribute</a>
 			<a th:href="@{/profile}">Profile</a>
-			<a  th:href="@{/explore6}">Comments</a>
-			<a th:href="@{/questions/question}">More</a>
-
-
+<form id="searchForm" action="/search" method="post">
+    <input type="text" id="searchField" name="query" placeholder="Enter job field">
+</form>
 			<div class="container">
 
-				<input type="text" id="jobField" placeholder="Enter job field" onkeyup="checkEnterKey(event)">
 
 
 				<div id="results">

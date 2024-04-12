@@ -18,6 +18,9 @@ public class Message {
 
 	
 	
+	public Message() {
+		super();
+	}
 	public Message(String name, String content) {
 		super();
 		this.name = name;

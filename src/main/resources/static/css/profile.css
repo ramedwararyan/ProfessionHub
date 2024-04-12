@@ -19,7 +19,7 @@
 }
 
 #title button {
-    position: absolute;
+  
     top: 0;
     right: 0;
     margin: 2.5vw 2vw;
@@ -68,7 +68,7 @@
     opacity: .5;
 }
 
-.info #first_name{
+.info #full_name{
     position: absolute;
     left: 30%;
     top: 30%;
@@ -85,13 +85,13 @@
     padding: .6vw 1vw;
     border-radius: 20px;
 }
-.info #last_name{
+.info #email{
     position: absolute;
     left: 60%;
     top: 30%;
 }
 
-.info #lninput{
+.info #email_input{
     position: absolute;
     left: 60%;
     top: 35%;
@@ -102,13 +102,13 @@
     padding: .6vw 1vw;
     border-radius: 20px;
 }
-.info #email{
+.info #last_name{
     position: absolute;
     left: 60%;
     top: 50%;
 }
 
-.info #email_input{
+.info #lninput{
     position: absolute;
     left: 60%;
     top: 55%;
@@ -235,7 +235,7 @@
     border: 1.5px solid white;
     position: absolute;
     left: 50%;
-    top: 90%;
+    top: 70%;
     font-size: 2vw;
     padding: .5vw 2vw;
     border-radius: 20px;

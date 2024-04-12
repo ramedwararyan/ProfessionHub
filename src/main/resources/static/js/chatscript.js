@@ -1,13 +1,7 @@
- 
-var userName =  "Default"
-var stompClient;
 
-function fetchUsername() {
-    $.get("/api/user", function (data) {
-        userName = data;
-         connect(); 
-    });
-}
+
+var username= ""
+
 
 function sendMessage() {
     let messageContent = $("#message-value").val();
@@ -18,7 +12,7 @@ function sendMessage() {
     }
 
     let jsonOb = {
-        name: userName,
+        name: username,
         content: messageContent
     };
 
@@ -53,7 +47,7 @@ function connect() {
 
 function showMessage(message) {
     // Prepend the message to the message container
-    $("#message-container-table").prepend(`
+    $("#message-container-table").append(`
    
      <div class="row">
             <div class="col-md-12">
@@ -62,7 +56,7 @@ function showMessage(message) {
                      <li class="comment">
                         <div class="card border-light mb-3">
                             <div class="card-body">
-                               <b>${message.name}:</b>
+                          <h6>${message.name}</h6>
                                 <p> ${message.content}</p>
                               
                             </div>
@@ -87,6 +81,8 @@ function scrollMessageContainerToBottom() {
 $(document).ready(() => {
     // Fetch user information when the chatroom is loaded
     connect();
+    
+    username = $("input[name='fullname']").val();
     
     $("#send-btn").click(() => {
         sendMessage();

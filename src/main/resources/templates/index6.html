@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Stack</title>
+    <link rel="stylesheet"  th:href="@{/css/index6.css}">
+</head>
+
+<body>
+    <div class="container">
+        <button id="Btn-comment" th:onclick="window.location.href='/explore6'">Discussion Area</button>
+           
+     
+        <img src="img/fs roadmap.png" alt="">
+        <button id="HTML" onclick="openModal()">HTML</button>
+        <div id="myModal" class="modal-background">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h1>HTML</h1>
+                <p>
+                    To become a full stack developer, start by grasping HTML fundamentals for structuring web pages.
+                    Learn tags, attributes, and semantic elements for content organization. Understand forms, tables,
+                    and multimedia integration. Progress to advanced topics like accessibility and SEO optimization.
+                    Practice building responsive layouts to create seamless user experiences across devices. <br>
+                    <br>
+                    Visit the following resources to learn more:
+                    <a href="https://www.w3schools.com/html/" target="_blank">w3schools html tutorial</a>
+                    <a href="https://www.geeksforgeeks.org/html-tutorial/" target="_blank">geeksforgeeks html
+                        tutorial</a>
+                    <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML" target="_blank">MDN webdocs</a>
+                    Video Tutorial:-
+                    <a href="https://youtu.be/4dprtEzunIk?si=gzacpeJfBcmMjAkB" target="_blank">HTML Tutorial</a>
+                </p>
+            </div>
+        </div>
+        <button id="CSS" onclick="openModal2()">CSS</button>
+        <div id="myModal2" class="modal-background">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" onclick="closeModal2()">&times;</span>
+                <h1>CSS</h1>
+                <p>To become a full stack developer, CSS should be learned progressively, starting with basic concepts
+                    such as selectors, properties, and layouts. Then advance to responsive design, preprocessors like
+                    SASS/LESS, and frameworks like Bootstrap. Additionally, mastering CSS frameworks and understanding
+                    CSS-in-JS techniques enhances proficiency in front-end development for full stack expertise. <br>
+                    <br>
+                    Visit the following resources to learn more:
+                    <a href="https://www.w3schools.com/css/" target="_blank">w3schools CSS tutorial</a>
+                    <a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/" target="_blank">Responsive
+                        Web Design - by freecodecamp</a>
+                    <a href="https://www.geeksforgeeks.org/css-complete-guide/" target="_blank">geeksforgeeks A to Z css
+                        guide</a>
+                    Video Tutorial:-
+                    <a href="https://youtu.be/K1naz9wBwKU?si=q8fvdiXPZh1nYbvt">CSS tutorial</a>
+                </p>
+            </div>
+        </div>
+        <button id="JS" onclick="openModal3()">JavaScript</button>
+        <div id="myModal3" class="modal-background">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" onclick="closeModal3()">&times;</span>
+                <h1>JavaScript</h1>
+                <p>To become a full stack developer proficient in JavaScript, start with foundational concepts like
+                    variables, functions, and control flow. Progress to DOM manipulation, AJAX, and asynchronous
+                    programming. Master frameworks like React or Angular for frontend development and Node.js for
+                    backend. Practice by building diverse projects and collaborating with peers. <br>
+                    <br>
+                    Visit the following resources to learn more:
+                    <a href="https://www.w3schools.com/js/">w3schools JavaScript tutorial</a>
+                    <a href="https://www.geeksforgeeks.org/javascript/">geeksforgeeks JavaScript tutorial</a>
+                    Video Tutorials:-
+                    <a href="https://youtu.be/htznIeWKgg8?si=byWwD29MoJbpFSXb">Javascript Basics</a>
+                    <a href="https://youtu.be/htznIeWKgg8?si=byWwD29MoJbpFSXb">Javascript Advanced</a>
+                    <a href="https://youtu.be/EgDmCbhmstU?si=geN1oFnEnSpZCeYG">Async Javascript</a>
+                </p>
+            </div>
+        </div>
+        <button id="NPM" onclick="openModal4()">NPM</button>
+        <div id="myModal4" class="modal-background">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" onclick="closeModal4()">&times;</span>
+                <h1>NPM</h1>
+                <p>npm (Node Package Manager) is a vital tool for full-stack web development, managing JavaScript
+                    dependencies. It streamlines package installation, updates, and project management, enhancing
+                    workflow efficiency. With npm, developers access a vast repository of libraries, frameworks, and
+                    tools, facilitating seamless development across frontend and backend, promoting code reuse and
+                    collaboration. <br>
+                    <br>
+                    Visit the following resources to learn more:
+                    <a href="https://nodesource.com/blog/an-absolute-beginners-guide-to-using-npm/">Beginners guide for
+                        NPM</a>
+                    <a href="https://www.geeksforgeeks.org/html-tutorial/">What is NPM - w3schools</a>
+                    <a href="https://docs.npmjs.com/using-npm-packages-in-your-projects">NPM Docs</a>
+                    Video Tutorials
+                    <a href="https://youtu.be/nSFe1-kpfbQ?si=hh2xfDSOaZfJMMK-">npm and node.js packages</a>
+                    <a href="https://youtu.be/M8nlgBQBxxo?si=fAXvdzs7JwHDqPWu">What is npm</a>
+
+                </p>
+            </div>
+        </div>
+        <button id="Github" onclick="openModal5()">Github</button>
+        <div id="myModal5" class="modal-background">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" onclick="closeModal5()">&times;</span>
+                <h1>Github</h1>
+                <p>GitHub is a central platform for full-stack web development, offering version control and
+                    collaboration features. Developers utilize Git to manage code, track changes, and coordinate team
+                    efforts. GitHub hosts repositories, enabling seamless collaboration, code reviews, and project
+                    management. It fosters transparency, community engagement, and efficient software development
+                    workflows. <br>
+
+                    Visit the following resources to learn more:
+                    <a href="https://docs.github.com/en/get-started/start-your-journey">Github Documentation</a>
+                    <a href="https://ooloo.io/project/github-flow">Free Course to learn Github</a>
+                    Video Tutorials:-
+                    <a href="https://youtu.be/yBebbcNBhRc?si=6ddsQfkaLq4Xnh6JL">Uploading projects and launching free
+                        website</a>
+                    <a href="https://youtu.be/YbX_5FTOgL8?si=5dzjLsqo4IUbSvly">Master Git and Github</a>
+                </p>
+            </div>
+        </div>
+        <button id="Tailwind" onclick="openModal6()">Tailwind</button>
+        <div id="myModal6" class="modal-background">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" onclick="closeModal6()">&times;</span>
+                <h1>Tailwind</h1>
+                <p>Tailwind CSS revolutionizes full-stack web development by offering a utility-first approach. It
+                    streamlines styling with pre-defined classes, allowing rapid prototyping and easy maintenance.
+                    Tailwind promotes consistency across projects, facilitates responsive design, and empowers
+                    developers to focus on functionality. Its modular architecture enhances productivity and scalability
+                    in frontend development. <br>
+                    <br>
+                    Visit the following resources to learn more:
+                    <a href="https://www.geeksforgeeks.org/introduction-to-tailwind-css/">Introduction to tailwind css -
+                        geeksforgeeks</a>
+                    <a href="https://www.freecodecamp.org/news/what-is-tailwind-css-a-beginners-guide/">What is Tailwind
+                        CSS - freecodecamp</a>
+                    Video Tutorials:-
+                    <a href="https://youtu.be/hgNMVZcL83o?si=KBIAoKnWvX4dwN0V">Tailwind CSS</a>
+                    <a href="https://youtu.be/L4_jarMnB0c?si=5eYh99V5_rsyT44x">Mastering Tailwind CSS</a>
+                </p>
+            </div>
+        </div>
+        <button id="React" onclick="openModal7()">React</button>
+        <div id="myModal7" class="modal-background">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" onclick="closeModal7()">&times;</span>
+                <h1>React</h1>
+                <p>React, a JavaScript library, is pivotal in full-stack web development for building interactive user
+                    interfaces. It employs a component-based architecture, enhancing code reusability and
+                    maintainability. React's virtual DOM optimizes rendering performance, ensuring seamless user
+                    experiences. It integrates smoothly with backend technologies, enabling efficient development of
+                    dynamic and responsive web applications. <br>
+                    <br>
+                    Visit the following resources to learn more:
+                    <a href="https://legacy.reactjs.org/tutorial/tutorial.html">Official tutorial by React</a>
+                    <a href="https://www.w3schools.com/REACT/DEFAULT.ASP">React tutorial by w3schools</a>
+                    <a href="https://www.geeksforgeeks.org/learn-reactjs/">Learn Reactjs geeksforgeeks</a>
+                    Video Tutorials:-
+                    <a href="https://youtu.be/Xe8CkYZvCig?si=BGveHokuJCeqKOBA">Reactjs basics in one video</a>
+                    <a href="https://youtu.be/-mJFZp84TIY?si=vsKWC9tTfNOnN8di">Reactjs complete course</a>
+                </p>
+            </div>
+        </div>
+        <button id="NJ" onclick="openModal8()">Node.js</button>
+        <div id="myModal8" class="modal-background">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" onclick="closeModal8()">&times;</span>
+                <h1>Node.js</h1>
+                <p>Node.js, a JavaScript runtime built on Chrome's V8 engine, empowers full-stack web development by
+                    enabling server-side scripting. Its event-driven, non-blocking I/O model enhances scalability and
+                    performance. Node.js facilitates building lightweight, fast, and scalable backend systems, allowing
+                    seamless integration with frontend frameworks like React or Angular for a complete web development
+                    stack. <br>
+                    <br>
+                    Visit the following resources to learn more:
+                    <a href="https://www.w3schools.com/nodejs/">w3schools nodejs tutorial</a>
+                    <a href="https://nodejs.org/en/learn/getting-started/introduction-to-nodejs">Introduction to nodejs
+                        - by nodejs</a>
+                    <a href="https://www.geeksforgeeks.org/nodejs/">geeksforgeeks nodejs tutorial</a>
+                    Video Tutorials:-
+                    <a href="https://youtu.be/yEHCfRWz-EI?si=ewx52MVlzNPZ9cEL">What is nodejs - Simplified
+                        explaination</a>
+                    <a href="https://youtu.be/BLl32FvcdVM?si=_gkJqQhFR5qmI8Qt">Nodejs in one video</a>
+                </p>
+            </div>
+        </div>
+        <button id="SQL" onclick="openModal9()">SQL</button>
+        <div id="myModal9" class="modal-background">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" onclick="closeModal9()">&times;</span>
+                <h1>SQL</h1>
+                <p>SQL (Structured Query Language) is foundational in full-stack web development, managing relational
+                    databases. It facilitates data manipulation, retrieval, and administration tasks. With SQL,
+                    developers ensure data integrity, optimize performance, and implement complex queries. SQL databases
+                    like MySQL, PostgreSQL, or SQLite seamlessly integrate with backend frameworks, forming robust web
+                    applications. <br>
+                    <br>
+                    Visit the following resources to learn more:
+                    <a href="https://www.w3schools.com/sql/">w3schools SQL tutorial</a>
+                    <a href="https://www.geeksforgeeks.org/sql-tutorial/">geeksforgeeks SQL tutorial</a>
+                    <a href="https://www.programiz.com/sql">SQL tutorial by Programiz</a>
+                    <a href="https://www.geeksforgeeks.org/what-is-database/?ref=lbp">What is a Database</a>
+                    Video Tutorials:-
+                    <a href="https://youtu.be/hlGoQC332VM?si=4pc1xSvK5lXA1wXW">Complete SQL in one video</a>
+                    <a href="https://youtu.be/yH1zCq-iaeU?si=TSYutWUrKMNR0Tsk">SQL tutorial</a>
+                </p>
+            </div>
+        </div>
+        <button id="RAPI" onclick="openModal10()">Restful API's</button>
+        <div id="myModal10" class="modal-background">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" onclick="closeModal10()">&times;</span>
+                <h1>Restful API's</h1>
+                <p>RESTful APIs (Representational State Transfer) are vital in full-stack web development, enabling
+                    communication between client and server. They adhere to REST principles, utilizing HTTP methods for
+                    data exchange in a stateless manner. RESTful APIs facilitate seamless integration of frontend and
+                    backend components, supporting scalable and interoperable web applications. <br>
+                    <br>
+                    Visit the following resources to learn more:
+                    <a href="https://www.codecademy.com/article/what-is-rest">What is REST</a>
+                    <a href="https://www.redhat.com/en/topics/api/what-is-a-rest-api">What is a REST API</a>
+                    <a href="https://restapitutorial.com/#google_vignette">REST api tutorial</a>
+                    Video Tutorial:-
+                    <a href="https://youtu.be/XGa4onZP66Q?si=3BuGv6PN8t5t8mYJ">What is an API</a>
+                    <a href="https://youtu.be/BZi44GOD8kY?si=6yGekHTIXvEeWew1">REST API web service tutorial</a>
+                </p>
+            </div>
+        </div>
+        <button id="JWD" onclick="openModal11()">JWT</button>
+        <div id="myModal11" class="modal-background">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" onclick="closeModal11()">&times;</span>
+                <h1>JWT</h1>
+                <p>JWT (JSON Web Tokens) is pivotal in full-stack web development for secure authentication and
+                    authorization. It encodes user information as JSON objects, signed cryptographically, and
+                    transmitted between parties. JWT facilitates stateless authentication, enabling efficient and
+                    scalable communication between client and server, enhancing security in web applications. <br>
+                    <br>
+                    Visit the following resources to learn more:
+                    <a href="https://www.geeksforgeeks.org/json-web-token-jwt/">geeksforgeeks JWT</a>
+                    <a
+                        href="https://www.simplilearn.com/tutorials/nodejs-tutorial/jwt-authentication#:~:text=JSON%20Web%20Token%20(JWT)%20is,or%20inside%20an%20HTTP%20header.">What
+                        is JSON Webtoken</a>
+                    Video Tutorials:-
+                    <a href="https://youtu.be/p_sDlCyzUFU?si=AdTX2E68BilQoDuL">JSON web token explained</a>
+                    <a href="https://youtu.be/mbsmsi7l3r4?si=QyzCrEpuhL4bMLDj">JWT Authentication Tutorial</a>
+                </p>
+            </div>
+        </div>
+        <button id="Redis" onclick="openModal12()">Redis</button>
+        <div id="myModal12" class="modal-background">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" onclick="closeModal12()">&times;</span>
+                <h1>Redis</h1>
+                <p>Redis, an in-memory data structure store, is essential in full-stack web development for caching and
+                    session management. It offers fast data retrieval, enhancing performance in storing frequently
+                    accessed data. Redis supports various data structures and features, facilitating efficient data
+                    handling and scalability in web applications. <br>
+
+                    Visit the following resources to learn more:
+                    <a href="https://www.ibm.com/topics/redis#:~:text=the%20next%20step-,What%20is%20Redis%3F,cache%20or%20quick%2Dresponse%20database."
+                        target="_blank">What is Redis - IBM</a>
+                    <a href="https://redis.io/">Redis Official Website</a>
+                    Video Tutorial:-
+                    <a href="https://youtu.be/rsHq4NPDEs0?si=VQGfzMVUQEF491aR">Redis - Game Changer</a>
+                    <a href="https://youtu.be/Vx2zPMPvmug?si=A-AsIrkTZGGqLUrC">Redis Crash Course</a>
+                </p>
+            </div>
+        </div>
+        <button id="DevOps" onclick="openModal13()">Devops Knowledge</button>
+        <div id="myModal13" class="modal-background">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" onclick="closeModal13()">&times;</span>
+                <h1>Devops</h1>
+                <p>DevOps knowledge is crucial in full-stack web development for streamlining software delivery and
+                    enhancing collaboration between development and operations teams. It involves automation, continuous
+                    integration/continuous deployment (CI/CD), infrastructure management, and monitoring. DevOps
+                    practices ensure faster releases, improved reliability, and scalability of web applications.
+                    <br>
+
+                    Visit the following resources to learn more:
+                    <a href="https://www.ironhack.com/gb/blog/the-role-of-devops-in-web-development">Role of Devops in
+                        web dev</a>
+                    <a href="https://www.simplilearn.com/devops-engineer-skills-article">Must know Devops skills</a>
+                    Video Tutorial:
+                    <a href="https://youtu.be/h7LDnVsNRVI?si=PetQ8xGoQu2VLoAD">Devops simply explained</a>
+                </p>
+            </div>
+        </div>
+        <button id="Linux" onclick="openModal14()">Linux Basics</button>
+        <div id="myModal14" class="modal-background">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" onclick="closeModal14()">&times;</span>
+                <h1>Linux</h1>
+                <p>Linux knowledge is essential in full-stack web development for managing server environments
+                    efficiently. It includes command-line operations, file system navigation, package management, and
+                    basic system administration tasks. Linux proficiency enables developers to deploy, configure, and
+                    maintain web servers, ensuring stable and secure hosting for web applications.
+                    <br>
+                    Visit the following resources to learn more:
+                    <a href="https://www.geeksforgeeks.org/linux-tutorial/">Linux tutorial - geeksforgeeks</a>
+                    <a
+                        href="https://www.freecodecamp.org/news/bash-scripting-tutorial-linux-shell-script-and-command-line-for-beginners/">Linux
+                        for Beginners</a>
+                    Video Tutorial:
+                    <a href="https://youtu.be/_tCY-c-sPZc?si=-9H6GT23zSSx81bA">Linux in one video</a>
+                    <a href="https://youtu.be/sWbUDq4S6Y8?si=W9HH-W_UVe7MGrHE">Linux Full Course</a>
+                </p>
+            </div>
+        </div>
+        <button id="AWS" onclick="openModal15()">Basic AWS Services</button>
+        <div id="myModal15" class="modal-background">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" onclick="closeModal15()">&times;</span>
+                <h1>AWS</h1>
+                <p>AWS services knowledge is indispensable in full-stack web development for scalable and reliable
+                    infrastructure management. It encompasses understanding various AWS offerings like EC2 for virtual
+                    servers, S3 for storage, RDS for databases, and Lambda for serverless computing. Mastery of AWS
+                    enables developers to deploy, monitor, and optimize web applications effectively.AWS has several
+                    services but you don’t need to know all of them. Here are the most common ones that you can get
+                    started with:
+                    <br>
+                    <br>
+                    Visit the following resources to learn more:
+                    <a href="https://aws.amazon.com/ec2/">EC2 - Virtual Machines in the Cloud</a>
+                    <a href="https://aws.amazon.com/vpc/">VPC - Virtual Private Cloud</a>
+                    <a href="https://aws.amazon.com/s3/">S3 - Object Storage</a>
+                    <a href="https://aws.amazon.com/route53/">Route 53 - DNS</a>
+                    <a href="https://aws.amazon.com/ses/">SES - Email sending</a>
+                    Video Tutorial:
+                    <a href="https://youtu.be/Z3SYDTMP3ME?si=jNavqhIXNShc3ztY">Introduction to AWS Services</a>
+                    <a href="https://youtube.com/playlist?list=PL6XT0grm_TfgtwtwUit305qS-HhDvb4du&si=B6DrRQ3GhZ8U40yV">AWS Tutorial for Beginners</a>
+                </p>
+            </div>
+        </div>
+        <button id="Monit" onclick="openModal16()">Monit</button>
+        <div id="myModal16" class="modal-background">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" onclick="closeModal16()">&times;</span>
+                <h1>Monit</h1>
+                <p>Monit knowledge is valuable in full-stack web development for ensuring server stability and performance. It involves configuring Monit, a system monitoring tool, to automatically restart services, monitor resource usage, and send alerts on issues. Monit enhances reliability by promptly addressing problems, optimizing uptime, and facilitating smooth web application operation. <br>
+                    <br>
+                    Visit the following resources to learn more:
+                    <a href="https://mmonit.com/monit/#documentation">Monit Documentation</a>
+                    <a href="https://mmonit.com/monit/documentation/monit.html">Monit Manual</a>
+                    Video Tutorial:
+                    <a href="https://youtu.be/7FIeBokT4so?si=rM7aketalo63dNfB">How to install and setup Monit</a>
+                    <a href="https://youtu.be/3cA5lNje1Ow?si=zFmoUCjegrN1HWne">Monit - Opensource Self Healing Server Monitoring Server Software for your Linux or Unix Server</a>
+                </p>
+            </div>
+        </div>
+        <button id="Gactions" onclick="openModal17()">Github Actions</button>
+        <div id="myModal17" class="modal-background">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" onclick="closeModal17()">&times;</span>
+                <h1>Github Actions</h1>
+                <p>GitHub Actions knowledge is vital in full-stack web development for automating workflows directly within GitHub repositories. It involves creating custom workflows using YAML syntax to build, test, and deploy applications. With GitHub Actions, developers automate tasks, streamline collaboration, and ensure continuous integration and deployment pipelines for efficient web development processes.
+                    <br>
+                    <br>
+
+                    Visit the following resources to learn more:
+                    <a href="https://github.com/features/actions">Github Actions Official</a>
+                    <a href="https://docs.github.com/en/actions">GitHub Actions documentation</a>
+                    <a href="https://docs.github.com/en/actions/quickstart">Quick Start for Github Actions</a>
+                    Video Tutorial:
+                    <a href="https://youtu.be/R8_veQiYBjI?si=mD5iwxNncDsaNzQC">Github Action Tutorial</a>
+                    <a href="https://youtu.be/zqi4fDF-S60?si=bREgE8yfnEqehZ-r">CI-CD with Jetbrains</a>
+                </p>
+            </div>
+        </div>
+        <button id="Ansible" onclick="openModal18()">Ansible</button>
+        <div id="myModal18" class="modal-background">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" onclick="closeModal18()">&times;</span>
+                <h1>Ansible</h1>
+                <p>Ansible knowledge is crucial in full-stack web development for automating configuration management and deployment tasks across servers. It involves writing YAML-based playbooks to define desired system states and executing tasks remotely. With Ansible, developers ensure consistency, scalability, and reliability in managing infrastructure, enhancing efficiency in web application deployment and maintenance. 
+                    <br>
+                    <br>
+                    Visit the following resources to learn more:
+                    <a href="https://docs.ansible.com/ansible/latest/getting_started/index.html">Ansible Documentation</a>
+                    <a href="https://spacelift.io/blog/ansible-tutorial">Ansible tutorial for Beginners</a>
+                    
+                    Video Tutorial:
+                    <a href="https://www.youtube.com/live/9Ua2b06oAr4?si=d5kjh-eQSlJbjiYy">Ansible Tutorial - By Edureka</a>
+                    <a href="https://youtu.be/JTLXAGZMoiY?si=5pyhtCu1VaA58iHM">What is Ansible</a>
+                </p>
+            </div>
+        </div>
+        <button id="Terraform" onclick="openModal19()">Terraform</button>
+        <div id="myModal19" class="modal-background">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" onclick="closeModal19()">&times;</span>
+                <h1>Terraform</h1>
+                <p>Terraform knowledge is essential in full-stack web development for provisioning and managing cloud infrastructure as code. It involves defining infrastructure components using declarative configuration files. With Terraform, developers automate infrastructure deployment across various cloud providers, ensuring scalability, reliability, and consistency in web application environments.
+                    <br>
+                    <br>
+                    Visit the following resources to learn more:
+                    <a href="https://www.terraform.io/">Terraform Website</a>
+                    <a href="https://developer.hashicorp.com/terraform/docs">Terraform Documentation</a>
+                    Video Tutorial:
+                    <a href="https://youtu.be/SLB_c_ayRMo?si=muvo7nyCAPN67GTN">Terraform - freecodecamp</a>
+                    <a href="https://youtu.be/YcJ9IeukJL8?si=bochGSyqAUoNqV3C">Terraform tutorial for begginers</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script  th:src="@{/js/script6.js}"></script>
+
+</html>

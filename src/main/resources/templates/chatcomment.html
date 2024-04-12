@@ -1,94 +1,81 @@
 <!DOCTYPE html>
-<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Realtime comment system</title>
-    <link rel="stylesheet" href="/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}">
-    <link rel="stylesheet" href="/css/style.css" th:href="@{/css/chatcommentstyle.css}">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Realtime comment system</title>
+	<link rel="stylesheet" href="/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}">
+	<link rel="stylesheet" href="/css/style.css" th:href="@{/css/chatcommentstyle.css}">
 </head>
 
 <body>
-    <div class="container">
-        <div class="row mt-4">
-           
-        </div>
-        <div class="row mb-4">
-            <div class="col-md-12">
-                <h4 class="border-bottom pb-2">Comments</h4>
-                
-                 <div th:each="user : ${users}">
-       <p>   <span th:text="${user.fullname}"></span>   </p>   
-                <input type="hidden" name="username" th:value="${user.fullname}" />
-                </div>
-            </div>
-            <div class="col-md-12">
-                <div class="form-group">
-                    <label for="">Write a comment</label>
-                    <textarea id="message-value" rows="3" class="form-control"></textarea>
-                </div>
-            </div>
-            <div class="col-md-12">
-                <button id="send-btn" class="btn btn-primary float-right">Post comment</button>
-            </div>
-             <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-6 offset-md-3">
-                    <div class="table-responsive mt-3">
-                        <table id="message-container-table" class="top-left-messages">
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="typing text-success"></div>
-                <ul class="comment__box">
+	<div class="container">
+		<div class="row mt-4">
+
+		</div>
+		<div class="row mb-4">
+			<div class="col-md-12">
+				<h4 class="border-bottom pb-2">Comments</h4>
+
+
+			</div>
+			<div class="col-md-12">
+				<div class="form-group">
+					<label for="">Write a comment</label>
+					<input type="hidden" th:value="${user.fullname}" name="fullname">
+					<textarea id="message-value" rows="3" class="form-control"></textarea>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<button id="send-btn" class="btn btn-primary float-right">Post comment</button>
+			</div>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-6 offset-md-3">
+						<div class="table-responsive mt-3">
+
+							
+
+
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<table id="message-container-table" class="bottom-left-messages">
+		<div class="row">
+			<div class="col-md-12">
+				<div th:each="message : ${messages}" class="message">
+				<div class="typing text-success"></div>
+				<ul class="comment__box">
+
+
 					
-					
-               
-                    <!--   <li class="comment">
-                        <div class="card border-light mb-3">
-                            <div class="card-body">
-                                <h6><span th:text="${user.fullname}"></span></h6>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur itaque,
-                                    exercitationem fuga sint enim non cupiditate deserunt soluta consequuntur
-                                    blanditiis!</p>
-                                <div>
-                                   
-                                    <small>11:30 PM</small>
-                                </div>
-                            </div>
-                        </div>
-                    </li> 
-                     <li class="comment">
-                        <div class="card border-light mb-3">
-                            <div class="card-body">
-                                <h6>John Doe</h6>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur itaque,
-                                    exercitationem fuga sint enim non cupiditate deserunt soluta consequuntur
-                                    blanditiis!</p>
-                                <div>
-                                    <img src="/img/clock.png" alt="clock">
-                                    <small>11:30 PM</small>
-                                </div>
-                            </div>
-                        </div>
-                    </li> -->
-                </ul>
-            </div>
-        </div>
-    </div>
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.25.3/moment.min.js"></script>
-    
-    <script src="/webjars/jquery/jquery.min.js"></script>
-    <script src="/webjars/sockjs-client/sockjs.min.js"></script>
-    <script src="/webjars/stomp-websocket/stomp.min.js"></script>
-    <script th:src="@{/js/chatscript.js}"></script>
+						<li class="comment">
+							<div class="card border-light mb-3">
+								<div class="card-body">
+								
+
+								<h6 th:text="${message.name}"></h6>
+								<p th:text="${message.content}"></p>
+								</div>
+							</div>
+					</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	</table>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.25.3/moment.min.js"></script>
+
+	<script src="/webjars/jquery/jquery.min.js"></script>
+	<script src="/webjars/sockjs-client/sockjs.min.js"></script>
+	<script src="/webjars/stomp-websocket/stomp.min.js"></script>
+	<script th:src="@{/js/chatscript.js}"></script>
 </body>
 
 </html>

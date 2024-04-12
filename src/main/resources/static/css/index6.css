@@ -1,0 +1,457 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    background-color: #0F1519;
+    font-family: 'matter';
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container #HTML{
+    top: 110.5%;
+    left: 21%;
+    background-color: #fff;
+    color: black;
+    position: absolute;
+    font-size: 1.5vw;
+    border-radius: 50px;
+    border: none;
+    padding: 1vw 1vw;
+}
+
+.container #HTML:hover{
+    cursor: pointer;
+    background-color: royalblue;
+    color: white;
+}
+
+.container #CSS{
+    top: 110.5%;
+    left: 47.7%;
+    background-color: #fff;
+    color: black;
+    position: absolute;
+    font-size: 1.5vw;
+    border-radius: 50px;
+    border: none;
+    padding: 1vw 1vw;
+}
+
+.container #CSS:hover{
+    cursor: pointer;
+    background-color: royalblue;
+    color: white;
+}
+
+.container #JS{
+    top: 110.5%;
+    left: 72%;
+    background-color: #fff;
+    color: black;
+    position: absolute;
+    font-size: 1.5vw;
+    border-radius: 50px;
+    border: none;
+    padding: 1vw 1vw;
+}
+
+.container #JS:hover{
+    cursor: pointer;
+    background-color: royalblue;
+    color: white;
+}
+
+.container #NPM{
+    top: 150%;
+    left: 73.7%;
+    background-color: #fff;
+    color: black;
+    position: absolute;
+    font-size: 1.5vw;
+    border-radius: 50px;
+    border: none;
+    padding: 1vw 1vw;
+}
+
+.container #NPM:hover{
+    cursor: pointer;
+    background-color: royalblue;
+    color: white;
+}
+.container #Github{
+    top: 150%;
+    left: 47%;
+    background-color: #fff;
+    color: black;
+    position: absolute;
+    font-size: 1.5vw;
+    border-radius: 50px;
+    border: none;
+    padding: 1vw 1vw;
+}
+
+.container #Github:hover{
+    cursor: pointer;
+    background-color: royalblue;
+    color: white;
+}
+
+.container #Tailwind{
+    top: 150%;
+    left: 20.5%;
+    background-color: #fff;
+    color: black;
+    position: absolute;
+    font-size: 1.5vw;
+    border-radius: 50px;
+    border: none;
+    padding: 1vw 1vw;
+}
+
+.container #Tailwind:hover{
+    cursor: pointer;
+    background-color: royalblue;
+    color: white;
+}
+
+.container #React{
+    top: 175%;
+    left: 21%;
+    background-color: #fff;
+    color: black;
+    position: absolute;
+    font-size: 1.5vw;
+    border-radius: 50px;
+    border: none;
+    padding: 1vw 1vw;
+}
+
+.container #React:hover{
+    cursor: pointer;
+    background-color: royalblue;
+    color: white;
+}
+
+.container #NJ{
+    top: 220%;
+    left: 46.5%;
+    background-color: #fff;
+    color: black;
+    position: absolute;
+    font-size: 1.5vw;
+    border-radius: 50px;
+    border: none;
+    padding: 1vw 1vw;
+}
+
+.container #NJ:hover{
+    cursor: pointer;
+    background-color: royalblue;
+    color: white;
+}
+
+.container #SQL{
+    top: 250%;
+    left: 47.6%;
+    background-color: #fff;
+    color: black;
+    position: absolute;
+    font-size: 1.5vw;
+    border-radius: 50px;
+    border: none;
+    padding: 1vw 1vw;
+}
+
+.container #SQL:hover{
+    cursor: pointer;
+    background-color: royalblue;
+    color: white;
+}
+
+.container #RAPI{
+    top: 250%;
+    left: 73%;
+    background-color: #fff;
+    color: black;
+    position: absolute;
+    font-size: 1.5vw;
+    border-radius: 50px;
+    border: none;
+    padding: 1vw 1vw;
+}
+
+.container #RAPI:hover{
+    cursor: pointer;
+    background-color: royalblue;
+    color: white;
+}
+
+.container #JWD{
+    top: 270%;
+    left: 76%;
+    background-color: #fff;
+    color: black;
+    position: absolute;
+    font-size: 1.5vw;
+    border-radius: 50px;
+    border: none;
+    padding: 1vw 1vw;
+}
+
+.container #JWD:hover{
+    cursor: pointer;
+    background-color: royalblue;
+    color: white;
+}
+
+.container #Redis{
+    top: 270%;
+    left: 47.2%;
+    background-color: #fff;
+    color: black;
+    position: absolute;
+    font-size: 1.5vw;
+    border-radius: 50px;
+    border: none;
+    padding: 1vw 1vw;
+}
+
+.container #Redis:hover{
+    cursor: pointer;
+    background-color: royalblue;
+    color: white;
+}
+
+.container #DevOps{
+    top: 315%;
+    left: 43%;
+    background-color: #fff;
+    color: black;
+    position: absolute;
+    font-size: 1.5vw;
+    border-radius: 50px;
+    border: none;
+    padding: 1vw 1vw;
+}
+
+.container #DevOps:hover{
+    cursor: pointer;
+    background-color: royalblue;
+    color: white;
+}
+
+.container #Linux{
+    top: 335%;
+    left: 45%;
+    background-color: #fff;
+    color: black;
+    position: absolute;
+    font-size: 1.5vw;
+    border-radius: 50px;
+    border: none;
+    padding: 1vw 1vw;
+}
+
+.container #Linux:hover{
+    cursor: pointer;
+    background-color: royalblue;
+    color: white;
+}
+
+.container #AWS{
+    top: 335%;
+    left: 12%;
+    background-color: #fff;
+    color: black;
+    position: absolute;
+    font-size: 1.5vw;
+    border-radius: 50px;
+    border: none;
+    padding: 1vw 1vw;
+}
+
+.container #AWS:hover{
+    cursor: pointer;
+    background-color: royalblue;
+    color: white;
+}
+
+.container #Monit{
+    top: 358%;
+    left: 6%;
+    background-color: #fff;
+    color: black;
+    position: absolute;
+    font-size: 1.5vw;
+    border-radius: 50px;
+    border: none;
+    padding: 1vw 1vw;
+}
+
+.container #Monit:hover{
+    cursor: pointer;
+    background-color: royalblue;
+    color: white;
+}
+
+.container #Gactions{
+    top: 358%;
+    left: 30%;
+    background-color: #fff;
+    color: black;
+    position: absolute;
+    font-size: 1.5vw;
+    border-radius: 50px;
+    border: none;
+    padding: 1vw 1vw;
+}
+
+.container #Gactions:hover{
+    cursor: pointer;
+    background-color: royalblue;
+    color: white;
+}
+
+.container #Ansible{
+    top: 358%;
+    left: 60%;
+    background-color: #fff;
+    color: black;
+    position: absolute;
+    font-size: 1.5vw;
+    border-radius: 50px;
+    border: none;
+    padding: 1vw 1vw;
+}
+
+.container #Ansible:hover{
+    cursor: pointer;
+    background-color: royalblue;
+    color: white;
+}
+
+.container #Terraform{
+    top: 358%;
+    left: 90%;
+    background-color: #fff;
+    color: black;
+    position: absolute;
+    font-size: 1.5vw;
+    border-radius: 50px;
+    border: none;
+    padding: 1vw 1vw;
+}
+
+.container #Terraform:hover{
+    cursor: pointer;
+    background-color: royalblue;
+    color: white;
+}
+
+.modal-background {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+  }
+
+  /* Modal content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+  }
+
+  .modal-content p{
+    background-color: #fff;
+    color: black;
+  }
+
+  .modal-content span{
+    background-color: #fff;
+  }
+  .modal-content h1{
+    background-color: #fff;
+    color: black;
+    font-weight: 300;
+  }
+  .modal-content a{
+    background-color: transparent;
+    text-decoration: none;
+    display: block;
+    color: black;
+    line-height: 3vw;
+    text-decoration: underline;
+    
+  }
+  .modal-content a:hover{
+    color: royalblue;
+  }
+
+
+  /* Close button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  /* Add animation */
+  @keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+  }
+  
+  #Btn-comment  {
+	  position:absolute;
+	  top:10%;
+	  right:3%;
+	  padding:1.5vw 2vw;
+	  background-color: transparent;
+
+	  border-radius: 25px;
+	  border: 2px solid white;
+  }
+  
+   #Btn-comment:hover  {
+	   
+	   background-color: white;
+	   color: #0F1519;
+	   
+   }
+  
+  
+  

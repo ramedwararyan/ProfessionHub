@@ -12,10 +12,11 @@ import org.springframework.stereotype.Service;
 
 import com.project.dto.UserDto;
 import com.project.entities.User;
-import com.project.entities.engineer.Aerospace;
 import com.project.exceptions.ResourceNotFoundException;
 import com.project.repo.UserRepository;
 import com.project.service.UserService;
+
+import jakarta.transaction.Transactional;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -33,8 +34,10 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public User save(UserDto userDto) {
-		User user = new User(userDto.getEmail(), passwordEncoder.encode(userDto.getPassword()) , userDto.getFullname(), userDto.getRole());
+		User user = new User(userDto.getEmail(), passwordEncoder.encode(userDto.getPassword()) , userDto.getFullname(), userDto.getRole(),userDto.getPhone(),userDto.getLocation());
 		user.setRole("USER");
+		user.setPhone("null");
+		user.setLocation("null");
 		return userRepository.save(user);
 	}
 	
@@ -47,7 +50,7 @@ public class UserServiceImpl implements UserService {
 	            User user = userRepository.findByEmail(userEmail);
 	            
 	            if (user != null) {
-	                return new UserDto(user.getUserId(), user.getFullname(),user.getEmail());
+	                return new UserDto(user.getUserId(),user.getEmail(), user.getFullname(),user.getPhone(),user.getLocation());
 	            }
 	        }
 
@@ -71,51 +74,34 @@ public class UserServiceImpl implements UserService {
 			return this.userToDto(savedUser);
 		}
 
-	
+	  @Override
+	    @Transactional()
+	    public UserDto getUserById(Long userId) {
+	        User user = userRepository.findById(userId).orElse(null);
+	        if (user != null) {
+	            return convertToDto(user);
+	        }
+	        return null;
+	    }
 
-	 @Override
-		public UserDto updateUser(UserDto userDto, Long userId) {
+	    @Override
+	    @Transactional
+	    public void updateUser(Long userId, UserDto userDto) {
+	        User user = userRepository.findById(userId).orElse(null);
+	        if (user != null) {
+	            user.setEmail(userDto.getEmail());
+	            user.setFullname(userDto.getFullname());
+	            user.setPhone(userDto.getPhone());
+	            user.setLocation(userDto.getLocation());
+	            // Update other fields as needed
+	            userRepository.save(user);
+	        }
+	    }
 
-			User user = this.userRepository.findById(userId)
-					.orElseThrow(() -> new ResourceNotFoundException("User", " Id ", userId));
-
-			user.setFullname(userDto.getFullname());
-			user.setEmail(userDto.getEmail());
-			user.setPassword(userDto.getPassword());
-			
-
-			User updatedUser = this.userRepository.save(user);
-			UserDto userDto1 = this.userToDto(updatedUser);
-			return userDto1;
-		}
-
-		@Override
-		public UserDto getUserById(Long userId) {
-
-			User user = this.userRepository.findById(userId)
-					.orElseThrow(() -> new ResourceNotFoundException("User", " Id ", userId));
-
-			return this.userToDto(user);
-		}
-
-		@Override
-		public List<UserDto> getAllUsers() {
-
-			List<User> users = this.userRepository.findAll();
-			List<UserDto> userDtos = users.stream().map(user -> this.userToDto(user)).collect(Collectors.toList());
-
-			return userDtos;
-		}
-
-		@Override
-		public void deleteUser(Long userId) {
-			User user = this.userRepository.findById(userId)
-					.orElseThrow(() -> new ResourceNotFoundException("User", "Id", userId));
-			this.userRepository.delete(user);
-
-		}
-
-
+	    // Utility method to convert User entity to UserDto
+	    private UserDto convertToDto(User user) {
+	        return new UserDto(user.getUserId(), user.getEmail(), user.getFullname());
+	    }
 	
 		@Override
 		public User dtoToUser(UserDto userDto) {
@@ -125,6 +111,7 @@ public class UserServiceImpl implements UserService {
 			return user;
 		}
 
+		@Override
 		public UserDto userToDto(User user) {
 			UserDto userDto = this.modelMapper.map(user, UserDto.class);
 			return userDto;

@@ -32,10 +32,10 @@ body {
     justify-content: center;
     padding-top: 3vw;
     margin-bottom: 2vw;
-    font-size: 10vw;
+    font-size: 6vw;
     font-weight: 900;
     text-transform: uppercase;
-    /* letter-spacing: 2vw; */
+    letter-spacing: 1vw;
 }
 
 #def p {
@@ -43,7 +43,7 @@ body {
     justify-content: center;
     align-items: center;
     /* width: 84vw; */
-    font-size: 1.5vw;
+    font-size: 1.3vw;
     margin: 2vw 5vw;
     margin-bottom: 2vw;
     text-align: justify;
@@ -59,7 +59,7 @@ body {
 
 #head2 h2 {
     margin-left: 2vw;
-    font-size: 8vw;
+    font-size: 6vw;
     font-weight: 300;
     margin-top: 1.5vw;
     display: flex;
@@ -77,10 +77,11 @@ body {
 #sbar input {
     color: black;
     height: 3.5vw;
-    width: 50vw;
+    width: 40vw;
     border-radius: 20vw;
     text-align: center;
-    font-size: 2vw;
+    font-size: 1.3vw;
+    border: none;
 }
 
 .fields #row1 {
@@ -91,164 +92,17 @@ body {
     max-width: 100%;
 }
 
-
-.container {
-    width: 400px;
-    height: 400px;
-    position: absolute;
-    left: 15%;
-    top: 100%;
-    transform: translate(-50%, -27%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#row1 button{
+    background-color: transparent;
+    border: 1.5px solid white;
+    font-size: 2vw;
+    padding: 1.2vw 2vw;
+    width: 16.2vw;
 }
 
-.container-2 {
-    width: 400px;
-    height: 400px;
-    position: absolute;
-    left: 32.5%;
-    top: 100%;
-    transform: translate(-50%, -27%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.container-3 {
-    width: 400px;
-    height: 400px;
-    position: absolute;
-    left: 50%;
-    top: 100%;
-    transform: translate(-50%, -27%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.container-4 {
-    width: 400px;
-    height: 400px;
-    position: absolute;
-    left: 67.2%;
-    top: 100%;
-    transform: translate(-50%, -27%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.container-5 {
-    width: 400px;
-    height: 400px;
-    position: absolute;
-    left: 84%;
-    top: 100%;
-    transform: translate(-50%, -27%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.center {
-    width: 180px;
-    height: 60px;
-    position: absolute;
-}
-
-.btn {
-    width: 180px;
-    height: 60px;
+#row1 button:hover{
+    background-color: white;
+    color: black;
     cursor: pointer;
-    background: transparent;
-    border: 1px solid #91C9FF;
-    outline: none;
-    transition: 1s ease-in-out;
-}
-
-#row2 .container {
-    width: 400px;
-    height: 400px;
-    position: absolute;
-    left: 15%;
-    top: 100%;
-    transform: translate(-50%, -27%);
-    justify-content: center;
-    align-items: center;
-}
-
-#row2 .container-2 {
-    width: 400px;
-    height: 400px;
-    position: absolute;
-    left: 32.5%;
-    top: 100%;
-    transform: translate(-50%, -27%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#row2 .container-3 {
-    width: 400px;
-    height: 400px;
-    position: absolute;
-    left: 50%;
-    top: 100%;
-    transform: translate(-50%, -27%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#row2 .container-4 {
-    width: 400px;
-    height: 400px;
-    position: absolute;
-    left: 67.2%;
-    top: 100%;
-    transform: translate(-50%, -27%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#row2 .container-5 {
-    width: 400px;
-    height: 400px;
-    position: absolute;
-    left: 84%;
-    top: 100%;
-    transform: translate(-50%, -27%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-svg {
-    position: absolute;
-    left: 0;
-    top: 0;
-    fill: none;
-    stroke: #fff;
-    stroke-dasharray: 150 480;
-    stroke-dashoffset: 150;
-    transition: 1s ease-in-out;
-}
-
-.btn:hover {
-    transition: 1s ease-in-out;
-    background: #4F95DA;
-}
-
-.btn:hover svg {
-    stroke-dashoffset: -480;
-}
-
-.btn span {
-    color: white;
-    font-size: 18px;
-    font-weight: 100;
+    
 }

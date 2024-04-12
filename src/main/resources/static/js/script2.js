@@ -42,58 +42,18 @@ function loadingimg3(){
 }
 loadingimg3()
 
-function checkEnterKey(event) {
-    if (event.key === 'Enter') {
-        performSearch();
+// Get reference to the search field and form
+const searchField = document.getElementById('searchField');
+const searchForm = document.getElementById('searchForm');
+
+// Add keyup event listener to the search field
+searchField.addEventListener('keyup', function(event) {
+    // Check if the Enter key (key code 13) was pressed
+    if (event.keyCode === 13) {
+        // Prevent the default form submission
+        event.preventDefault();
+        
+        // Submit the form
+        searchForm.submit();
     }
-}
-
-function performSearch() {
-    var jobField = document.getElementById('jobField').value;
-
-    // Make an AJAX request to your Spring API
-    fetch('/search/' + jobField)
-        .then(response => response.json())
-        .then(data => displayResults(data))
-        .catch(error => console.error('Error:', error));
-}
-
-function displayResults(results) {
-    var resultsContainer = document.getElementById('results');
-    resultsContainer.innerHTML = '';
-
-    if (results.length === 0) {
-        resultsContainer.innerHTML = '<p>No results found.</p>';
-    } else {
-        resultsContainer.style.opacity = 0; // Set initial opacity to 0
-
-        gsap.to(resultsContainer, {
-            opacity: 1,
-            duration: 0.5,
-            onComplete: function () {
-                // Animation complete, now append results
-                results.forEach(result => {
-                    // Assuming jobField is a property in each result object
-                    var jobField = result.jobField; // Replace 'jobField' with the actual property name
-
-                    // Display jobField in a paragraph
-                    resultsContainer.innerHTML += '<p class="result" onclick="serveFile(\'' + jobField + '\')">' + jobField + '</p>';
-                });
-            }
-        });
-    }
-}
-
-function serveFile(pdfName) {
-    // Make an AJAX request to serve the PDF file
-    window.location.href = '/file/' + pdfName + ".pdf";
-}
-
-
-
-
-
-
-
-
-
+});

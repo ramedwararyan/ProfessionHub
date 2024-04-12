@@ -56,10 +56,24 @@ public class AnswerController {
         model.addAttribute("answerText", answerText);
         List<Answers> answers = answerService.getAllAnswersForQuestion(questionId);
 		    model.addAttribute("answers", answers);
-        return "answer-page"; } else {
+        return "redirect:/questions/answers/get?questionId=" + questionId; } else {
             // Handle the case where the question with the given ID is not found
             // You can redirect to an error page or handle it in another way
             return "question-not-found"; // Example: redirect to a page indicating question not found
+        }
+    }
+    
+    @GetMapping("/questions/answers/get")
+    public String showAnswersForQuestion(@RequestParam("questionId") Long questionId, Model model) {
+        Optional<Questions> optionalQuestion = questionService.getQuestionById(questionId);
+        if (optionalQuestion.isPresent()) {
+            Questions question = optionalQuestion.get();
+            model.addAttribute("questionText", question.getQuestiontext());
+            List<Answers> answers = answerService.getAllAnswersForQuestion(questionId);
+            model.addAttribute("answers", answers);
+            return "answer-page";
+        } else {
+            return "question-not-found";
         }
     }
 }

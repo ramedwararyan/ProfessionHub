@@ -22,11 +22,14 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.project.dto.UserDto;
-import com.project.entities.engineer.Aerospace;
+import com.project.entities.User;
+
+import com.project.repo.UserRepository;
 import com.project.security.CustomUserDetail;
 import com.project.service.UserService;
 
@@ -41,6 +44,9 @@ public class UserController {
 	
 	@Autowired
 	private UserService userService;
+	
+	@Autowired
+	private UserRepository userRepository;
 	
 	
 	@GetMapping("/registration")
@@ -79,55 +85,16 @@ public class UserController {
 	    }
 	}
 
+
+
+	    // Handle form submission for updating user
+	    @PostMapping("/edit/{userId}")
+	    public String updateUser(@PathVariable("userId") Long userId, @ModelAttribute("user") UserDto userDto) {
+	        userService.updateUser(userId, userDto);
+	        return "profile";
+	    }
 	
-	//post-create
-		@PostMapping("/postuser")
-		public ResponseEntity<UserDto> createUser(@Valid @RequestBody UserDto userDto){
-			UserDto createUserDto = this.userService.createUser(userDto);
-			return new ResponseEntity<>(createUserDto,HttpStatus.CREATED);
-			
-		}
-			
 		
-		
-		
-		//put-update
-		@PutMapping("/{userId}")
-		public ResponseEntity<UserDto> updateUser(@Valid @RequestBody UserDto userDto,@PathVariable Long userId){
-			UserDto updatedUser = this.userService.updateUser(userDto, userId);
-			return ResponseEntity.ok(updatedUser);
-		}
-		
-		//put-update
-				@GetMapping("/edit/{userId}")
-				public String updateUser1(@Valid @RequestBody UserDto userDto,@PathVariable Long userId){
-					
-					return "edit-page";
-				}
-		
-		
-		//delete
-		
-		@DeleteMapping("/{userId}")
-		public void deleteUser(@PathVariable Long userId){
-			this.userService.deleteUser(userId);
-		
-		}
-		
-		//get-user
-		@GetMapping("/getAll")
-		public ResponseEntity<List<UserDto>> getAllUsers(){
-			return ResponseEntity.ok(this.userService.getAllUsers());
-		}
-		
-		@GetMapping("/{userId}")
-		public ResponseEntity<UserDto> getSingleUser(@PathVariable("userId") Long uid){
-			return ResponseEntity.ok(this.userService.getUserById(uid));
-		}
-		
-		 @GetMapping("/api/user")
-		    public String getUsername() {
-		        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-		        return authentication.getName();
-		    }
+
+	
 }

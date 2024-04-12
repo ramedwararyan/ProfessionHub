@@ -20,9 +20,14 @@ public class UserDto {
 	private String email;
 	private String password;
 	private String fullname;
+	private String phone;
+	private String location;
+	
 	private String role;
 	
 	private List<Questions> questions = new ArrayList<>();
+	
+	
 	
 	public UserDto(String email, String password, String fullname, String role) {
 		super();
@@ -38,14 +43,7 @@ public class UserDto {
 		this.fullname = fullname;
 	}
 
-	public UserDto(Long userId, String email, String password, String fullname, String role) {
-		super();
-		this.userId = userId;
-		this.email = email;
-		this.password = password;
-		this.fullname = fullname;
-		this.role = role;
-	}
+	
 
 	public UserDto(Long userId, String email, String fullname) {
 		super();
@@ -54,6 +52,40 @@ public class UserDto {
 		this.fullname = fullname;
 	}
 
+	public UserDto(Long userId, String email, String password, String fullname, String phone, String location,
+			String role) {
+		super();
+		this.userId = userId;
+		this.email = email;
+		this.password = password;
+		this.fullname = fullname;
+		this.phone = phone;
+		this.location = location;
+		this.role = role;
+	}
+
+	public UserDto(String email, String password, String fullname, String phone, String location, String role) {
+		super();
+		this.email = email;
+		this.password = password;
+		this.fullname = fullname;
+		this.phone = phone;
+		this.location = location;
+		this.role = role;
+	}
+
+	public UserDto(Long userId, String email, String fullname, String phone, String location) {
+		super();
+		this.userId = userId;
+		this.email = email;
+		this.fullname = fullname;
+		this.phone = phone;
+		this.location = location;
+	}
+	
+	
+
+	
 	
 
 	

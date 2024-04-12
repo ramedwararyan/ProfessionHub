@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explore</title>
-    <link rel="stylesheet" th:href="@{/css/style3.css}">
+    <link rel="stylesheet" href="style3.css" th:href="@{/css/style3.css}">
 </head>
 
 <body>
@@ -26,72 +26,22 @@
         <div id="head2">
             <h2>Fields in Engineering</h2>
         </div>
-       
+        <div id="sbar">
+            <input type="text" placeholder="Search your field">
+        </div>
         <div class="fields">
-           
+         
             <div id="row1">
-                <div class="container">
-                    <div class="center">
-                        <button class="btn">
-                            <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
-                                <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
-                                <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
-                            </svg>
-                            <span>Chemical</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="container-2">
-                    <div class="center">
-                        <button class="btn">
-                            <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
-                                <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
-                                <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
-                            </svg>
-                            <span>Civil</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="container-3">
-                    <div class="center">
-                        <button class="btn" th:onclick="window.location.href='/explore2'">
-                            <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
-                                <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
-                                <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
-                            </svg>
-                            <span>Computer Science</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="container-4">
-                    <div class="center">
-                        <button class="btn">
-                            <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
-                                <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
-                                <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
-                            </svg>
-                            <span>Electrical</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="container-5">
-                    <div class="center">
-                        <button class="btn">
-                            <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
-                                <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
-                                <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
-                            </svg>
-                            <span>Industrial</span>
-                        </button>
-                    </div>
-                </div>
-       
-        
-
-
+                <button th:onclick="window.location.href='/explore2'">Computer</button>
+                <button>Civil</button>
+                <button>Aeronautical</button>
+                <button>Mechanical</button>
+                <button>Electrical</button>
             </div>
+           
         </div>
     </div>
+    <script src="script3.js"></script>
 </body>
 
 </html>

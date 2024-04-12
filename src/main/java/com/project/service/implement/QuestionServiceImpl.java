@@ -2,7 +2,9 @@ package com.project.service.implement;
 
 
 import com.project.entities.Questions;
+import com.project.entities.User;
 import com.project.repo.QuestionRepository;
+import com.project.repo.UserRepository;
 import com.project.service.QuestionService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +16,9 @@ import java.util.Optional;
 @Service
 public class QuestionServiceImpl implements QuestionService {
 
+	@Autowired
+	private UserRepository userRepository;
+	
     private final QuestionRepository questionRepository;
 
     @Autowired
@@ -36,5 +41,11 @@ public class QuestionServiceImpl implements QuestionService {
         questionRepository.save(question);
     }
 
-    // Add more methods as needed (e.g., deleteQuestion, updateQuestion, etc.)
+    @Override
+    public List<Questions> getQuestionsByUserId(Long userId) {
+        return questionRepository.findByUserUserId(userId);
+    }
+   
+    
+   
 }

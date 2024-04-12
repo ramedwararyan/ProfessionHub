@@ -18,10 +18,13 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -51,7 +54,7 @@ public class QuestionController {
     	List<Questions> questions = questionService.getAllQuestions();
 	    model.addAttribute("questions", questions);
     	questionService.addQuestion(question);    
-        return "allQuestionPage"; // Redirect to the questions page or another appropriate page
+        return "redirect:/questions/all"; // Redirect to the questions page or another appropriate page
     }
     
 
@@ -61,8 +64,16 @@ public class QuestionController {
   		public String getAllQuestions(@ModelAttribute Questions question,Model model){
   			List<Questions> questions = questionService.getAllQuestions();
   		    model.addAttribute("questions", questions);
-  	        return "allQuestionPage";
+  	        return "redirect:/questions/all";
   		}
+  		
+  		@GetMapping("/all")
+  		public String showAllQuestions(Model model) {
+  		    List<Questions> questions = questionService.getAllQuestions();
+  		    model.addAttribute("questions", questions);
+  		    return "allQuestionPage";
+  		}
+
   		
   		@GetMapping("/answers")
   		public String showAllAnswersForQuestion(@RequestParam("questionId") Long questionId, Model model) {
@@ -74,5 +85,17 @@ public class QuestionController {
   		  model.addAttribute("questionText", question.getQuestiontext());
   		    return "answer-page";
   		}
+  		
+  		
+  		 // Mapping to get questions by userId
+  	    @GetMapping("/byUser/{userId}")
+  	    public String getQuestionsByUserId(@PathVariable("userId") Long userId, Model model) {
+  	        List<Questions> questions = questionService.getQuestionsByUserId(userId);
+  	        model.addAttribute("questions", questions);
+  	        return "user-questions"; // Return the HTML page name that displays questions by user
+  	    }
+
+  		 
+  		 
 }
 

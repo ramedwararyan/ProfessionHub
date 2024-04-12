@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload Form</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #343a40; /* Dark background color */
+            color: #ffffff; /* Light text color */
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h2 class="mt-4 mb-4">Contribute To US</h2>
+            <form  method="post" enctype="multipart/form-data" th:action="@{/upload}">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="title">Title:</label>
+                    <input type="text" class="form-control" id="title" name="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description:</label>
+                    <textarea class="form-control" id="description" name="description" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+				 Instructions:</br>
+                 <button type="button" class="btn btn-primary" id="showPdfBtn">Show</button>
+                  </div>
+                <div class="form-group">
+                    <label for="file">Choose File:</label>
+                    <input type="file" class="form-control-file" id="file" name="file" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Bootstrap JS (optional) -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    // Function to handle button click event to show PDF
+    document.getElementById('showPdfBtn').addEventListener('click', function() {
+        // Path to the PDF file, replace 'path_to_your_pdf' with the actual path
+        var pdfPath = '/file/Instructions.pdf';
+        // Open the PDF in a new window or tab
+        window.open(pdfPath, '_blank');
+    });
+</script>
+</body>
+</html>

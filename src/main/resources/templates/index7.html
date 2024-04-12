@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI & DS</title>
+    <link rel="stylesheet" th:href="@{/css/style7.css}">
+</head>
+
+<body>
+    <div class="container">
+		 <button id="Btn-comment" th:onclick="window.location.href='/explore13'">Discussion Area</button>
+         
+        <img src="img/AI & DS.png" alt="">
+        <button id="math" onclick="openModal()">Mathematics</button>
+        <div id="myModal" class="modal-background">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h1>Mathematics</h1>
+                <p>Becoming proficient in AI and DS requires a strong foundation in mathematics, including linear
+                    algebra, calculus, probability theory, and statistics. Advanced topics such as optimization,
+                    numerical methods, and differential equations are also beneficial for tackling complex algorithms
+                    and models in these fields. <br>
+
+                    Visit the following courses to learn more:
+                    <a href="https://www.coursera.org/specializations/mathematics-machine-learning?irclickid=xFMUe0RtBxyNUbzR6SQJR36tUkHU9TTkZ2ku3A0&irgwc=1&utm_medium=partners&utm_source=impact&utm_campaign=4863057&utm_content=b2c#courses"
+                        target="_blank">Courses for mathematics in ML</a>
+                    <a href="https://www.coursera.org/learn/algebra-and-differential-calculus-for-data-science?irclickid=xFMUe0RtBxyNUbzR6SQJR36tUkHU9QwsZ2ku3A0&irgwc=1&utm_medium=partners&utm_source=impact&utm_campaign=4863057&utm_content=b2c#syllabus"
+                        target="_blank">Algebra and Differential Calculus</a><br>
+                    Resources:-
+                    <a href="https://www.w3schools.com/ai/ai_mathematics.asp">w3schools Mathematics for AI & DS</a>
+                    <a href="https://www.geeksforgeeks.org/maths-for-data-science/">geeksforgeeks Mathematics for AI &
+                        DS</a>
+
+                </p>
+            </div>
+        </div>
+        <button id="stats" onclick="openModal2()">Statistics</button>
+        <div id="myModal2" class="modal-background">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" onclick="closeModal2()">&times;</span>
+                <h1>Statistics</h1>
+                <p>To become proficient in AI and DS, mastering statistics is essential. Start with fundamentals like
+                    probability theory, hypothesis testing, and regression analysis. Progress to advanced topics such as
+                    Bayesian inference, machine learning algorithms, and experimental design. Apply statistical concepts
+                    through hands-on projects and real-world datasets to solidify understanding and skills.<br>
+                    Courses :- <br>
+                    <a
+                        href="https://www.coursera.org/learn/stanford-statistics?irclickid=xFMUe0RtBxyNUbzR6SQJR36tUkHU9jVYZ2ku3A0&irgwc=1&utm_medium=partners&utm_source=impact&utm_campaign=4863057&utm_content=b2c#syllabus">Itroduction
+                        to Statistics - By Coursera</a>
+                    <a
+                        href="https://www.coursera.org/learn/statistical-analysis-hypothesis-testing-sas?irclickid=xFMUe0RtBxyNUbzR6SQJR36tUkHU9gzMZ2ku3A0&irgwc=1&utm_medium=partners&utm_source=impact&utm_campaign=4863057&utm_content=b2c#syllabus">Hypothesis
+                        testing by Coursera</a>
+                    <a
+                        href="https://www.coursera.org/learn/probability-statistics?irclickid=xFMUe0RtBxyNUbzR6SQJR36tUkHU9gU0Z2ku3A0&irgwc=1&utm_medium=partners&utm_source=impact&utm_campaign=4863057&utm_content=b2c#syllabus">Probability
+                        and Statistics by Coursera</a>
+
+                    Visit the following resources to learn more:
+                    <a href="https://www.w3schools.com/datascience/ds_stat_intro.asp">w3schools Introduction to Data
+                        Science - Statistics</a>
+
+                </p>
+            </div>
+        </div>
+        <button id="eco" onclick="openModal3()">Econometrics</button>
+        <div id="myModal3" class="modal-background">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" onclick="closeModal3()">&times;</span>
+                <h1>Econometrics</h1>
+                <p>To become proficient in AI and DS as an econometrician, focus on mastering statistical techniques,
+                    data manipulation, and econometric modeling. Acquire programming skills in languages like Python or
+                    R, and delve into machine learning algorithms. Apply econometric principles to real-world datasets,
+                    honing your ability to derive insights and make predictions, crucial for AI and DS roles.
+                    Additionally, stay updated on emerging methodologies and technologies in both fields. <br>
+                    <br>
+                    Books for learning Econometrics:- <br>
+                    <a href="https://bookdown.org/ts_robinson1994/10EconometricTheorems/">Fundamentals of
+                        Econometrics</a>
+                    <a href="https://www.academia.edu/33062577/Dougherty_Intro_to_Econometrics_4th_ed_small">Intro to
+                        Econometrics</a><br>
+                    Courses:- <br>
+                    <a
+                        href="https://www.coursera.org/learn/erasmus-econometrics?irclickid=xFMUe0RtBxyNUbzR6SQJR36tUkHU9izgZ2ku3A0&irgwc=1&utm_medium=partners&utm_source=impact&utm_campaign=4863057&utm_content=b2c#syllabus">Econometrics
+                        by Coursera</a>
+                    <a href="https://www.kaggle.com/learn/time-series">Learn the series - by kaggle</a>
+
+
+                </p>
+            </div>
+        </div>
+        <button id="coding" onclick="openModal4()">Coding</button>
+        <div id="myModal4" class="modal-background">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" onclick="closeModal4()">&times;</span>
+                <h1>Coding</h1>
+                <p>To become an AI and DS scientist, start by mastering programming languages like Python and R, which
+                    are widely used for data analysis and machine learning. Practice coding through projects, online
+                    courses, and tutorials focusing on algorithms, data manipulation, statistical analysis, and machine
+                    learning techniques. Additionally, learn about libraries like TensorFlow and scikit-learn for
+                    implementing AI models effectively. Continuously engage in practical applications and stay updated
+                    with the latest advancements in the field. <br>
+                    <br>
+                    Visit the following resources to learn more:
+                    <a href="https://www.w3schools.com/datascience/ds_python.asp">w3schools Data Science in Python</a>
+                    <a href="https://www.geeksforgeeks.org/data-science-with-python-tutorial/">geeksforgeeks Data
+                        Science for Python</a><br>
+                    Courses:-
+                    <a href="https://www.coursera.org/learn/python-for-applied-data-science-ai">Python for Data Science
+                        by Coursera</a>
+                    <a
+                        href="https://www.upgrad.com/bootcamps/job-linked-data-science-advanced-bootcamp/?utm_source=GOOGLE&utm_medium=NBSEARCH&utm_campaign=IND_ACQ_WEB_GOOGLE_NBSEARCH_BU_UPG_BCDS_MSV_Phrase_KH&utm_content=Data-Science-Full-Course&utm_term=data%20science%20full%20course&gad_source=1&gclid=CjwKCAjwtqmwBhBVEiwAL-WAYeqgV0gt_mNcGl7gv05rCv9gqHfGPnrS-Brfc7Sw1a7KCYOuzFj-mxoCHtwQAvD_BwE">Skilled
+                        Data Scientist by upGrad</a><br>
+                    Data Structures and Algorithm (Python):
+                    <a href="https://www.geeksforgeeks.org/python-data-structures-and-algorithms/">geeksforgeeks DSA</a>
+                    <a href="https://www.programiz.com/dsa">DSA by Programiz</a><br>
+                    Learn SQL:
+                    <a href="https://www.w3schools.com/sql/">w3schools SQL tutorial</a>
+                    <a href="https://www.geeksforgeeks.org/sql-tutorial/">SQL by geeksforgeeks</a>
+                </p>
+            </div>
+        </div>
+        <button id="EDA" onclick="openModal5()">Exploratory Data Analysis</button>
+        <div id="myModal5" class="modal-background">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" onclick="closeModal5()">&times;</span>
+                <h1>EDA</h1>
+                <p>Exploratory Data Analysis (EDA) is foundational for AI and DS scientists, providing insights into
+                    data structure and patterns. Learn statistical techniques, visualization tools (e.g., matplotlib,
+                    seaborn), and programming languages like Python or R. Practice with real datasets, understanding
+                    data distributions, correlations, outliers, and missing values. Mastering EDA enhances your ability
+                    to preprocess data effectively, leading to better modeling and decision-making in AI and DS.<br>
+                    <br>
+                    Visit the following resources to learn more:
+                    <a href="https://www.kaggle.com/code/kashnitsky/topic-1-exploratory-data-analysis-with-pandas">EDA
+                        with python and pandas</a>
+                    <a href="https://www.geeksforgeeks.org/exploratory-data-analysis-in-python/">geeksforgeeks EDA</a>
+                    <a href="https://www.kaggle.com/code/barisscal/eda-visualization-with-seaborn">EDA visualization
+                        with seaborn - By kaggle</a>
+                    Courses: <br>
+                    <a href="https://www.coursera.org/learn/ibm-exploratory-data-analysis-for-machine-learning">EDA for
+                        machine learning</a>
+                    <a href="https://www.coursera.org/projects/exploratory-data-analysis-seaborn">EDA with seaborn</a>
+
+                </p>
+            </div>
+        </div>
+        <button id="ML" onclick="openModal6()">Machine Learning</button>
+        <div id="myModal6" class="modal-background">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" onclick="closeModal6()">&times;</span>
+                <h1>Machine Learning</h1>
+                <p>To become an AI and DS scientist, learning Machine Learning (ML) is crucial. Start with foundational
+                    concepts like linear algebra, probability, and statistics. Then delve into ML algorithms, including
+                    supervised and unsupervised learning. Practice coding in Python and utilize libraries like
+                    TensorFlow and scikit-learn. Continuously apply ML to real-world problems and stay updated with
+                    advancements in the field.<br>
+                    <br>
+                    Visit the following resources to learn more:
+                    <a href="https://mlcourse.ai/book/topic01/topic01_intro.html">Open Course for ML in Data Science</a>
+                    <a
+                        href="https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf">EBOOK
+                        Bishop-Pattern-Recognition-and-Machine-Learning-2006</a>
+                        <a href="https://www.geeksforgeeks.org/machine-learning-and-data-science/">geeksforgeeks Machine Learning</a>
+                        Course:-
+                        <a href="https://www.coursera.org/specializations/machine-learning-introduction?irclickid=xFMUe0RtBxyNUbzR6SQJR36tUkHRzc3MZ2kuWI0&irgwc=1&utm_medium=partners&utm_source=impact&utm_campaign=4863057&utm_content=b2c#courses">Machine Learning Specialization</a>
+                </p>
+            </div>
+        </div>
+        <button id="DL" onclick="openModal7()">Deep Learning</button>
+        <div id="myModal7" class="modal-background">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" onclick="closeModal7()">&times;</span>
+                <h1>Deep Learning</h1>
+                <p>To become proficient in AI and DS, learning Deep Learning (DL) involves foundational knowledge in mathematics, statistics, and programming, followed by specialized study in neural networks, optimization techniques, and DL frameworks like TensorFlow or PyTorch. Practical experience through projects and staying updated with research are essential for mastery. <br>
+                    <br>
+                    Visit the following resources to learn more:
+                    <a href="https://www.deeplearningbook.org/">EBOOK for Deep Learning</a>
+                    <a href="https://www.geeksforgeeks.org/introduction-deep-learning/">geeksforgeeks Deep Learning tutorial</a><br>
+                    Course:-
+                    <a href="https://www.coursera.org/specializations/deep-learning?irclickid=xFMUe0RtBxyNUbzR6SQJR36tUkHRzbzEZ2kuWI0&irgwc=1&utm_medium=partners&utm_source=impact&utm_campaign=4863057&utm_content=b2c#courses">Deep Learning Specialization</a>
+                </p>
+            </div>
+        </div>
+        <button id="MLOps" onclick="openModal8()">MLOps</button>
+        <div id="myModal8" class="modal-background">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" onclick="closeModal8()">&times;</span>
+                <h1>MLOps</h1>
+                <p>To become proficient in MLOps as an AI and DS scientist, one should first gain a solid understanding of machine learning techniques, data preprocessing, and model training/validation. Then, focus on learning deployment strategies, version control, containerization, and continuous integration/continuous deployment (CI/CD) pipelines. Practical experience through projects and collaboration is essential for mastery. <br>
+                    <br>
+                    Visit the following resources to learn more:
+                    <a href="https://www.geeksforgeeks.org/what-is-mlops/">MLOps by geeksforgeeks</a>
+                    Course:-
+                    <a href="https://www.coursera.org/specializations/machine-learning-engineering-for-production-mlops?irclickid=xFMUe0RtBxyNUbzR6SQJR36tUkHRzY2AZ2kuWI0&irgwc=1&utm_medium=partners&utm_source=impact&utm_campaign=4863057&utm_content=b2c#courses">MLOps Specialization</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script th:src="@{/js/index7.js}"></script>
+
+</html>

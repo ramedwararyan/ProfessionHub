@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -10,6 +10,7 @@
 </head>
 
 <body>
+	 <div th:each="user : ${user}">
     <div id="main">
         <div id="title">
             <h1>My Profile</h1>
@@ -19,39 +20,46 @@
         <div class="hero_left">
             <div id="row1">
                 <i class="ri-user-line"></i>
-                <h4>User info</h4>
+                  <h4>Info</h4>
             </div>
             <div id="row2">
                 <i class="ri-heart-3-line"></i>
-                <h4>Favorites</h4>
+                  <h4><a th:href="@{'/questions/byUser/{userId}'(userId=${user.userId})}">My Questions</a></h4>
             </div>
             <div id="row3">
                 <i class="ri-question-line"></i>
-                <h4>My Questions</h4>
+                 <h4><a th:href="@{/questions/question}">All Questions</a></h4>
+               
+            
             </div>
             <div id="row4">
                 <i class="ri-logout-circle-line"></i>
-                <h4>Log out</h4>
+                <h4><a th:href="@{/logout}">Log out</a></h4>
             </div>
-        </div>
-
-        <div class="vl"></div>
-        <form action="" class="info">
-            <label for="" id="first_name">First Name</label>
-            <input type="text" id="fninput">
-            <label for="" id="last_name">Last Name</label>
-            <input type="text" id="lninput">
+           
+   
+     <div class="vl"></div>
+     
+        <form  th:action="@{'/edit/{userId}'(userId=${user.userId})}" th:object="${user}" method="post" class="info">
+			 <input type="hidden" th:value="${user.userId}" name="userId"/>
+            <label for="" id="full_name">Full Name</label>
+            <input type="text" id="fninput" th:value="${user.fullname}" name="fullname">
+           
             <label for="" id="email">Email Address</label>
-            <input type="text" id="email_input">
+            <input type="text" id="email_input" th:value="${user.email}" name="email">
+            
+            <label for="" id="last_name">Location</label>
+            <input type="text" id="lninput" th:value="${user.location}" name="location">
+            
             <label for="" id="phone">Phone</label>
-            <input type="text" id="phid">
-            <label for="" id="location">Location</label>
-            <input type="text" id="loco">
-            <label for="" id="P_Code">Postal Code</label>
-            <input type="text" id="postcode">
+            <input type="text" id="phid" th:value="${user.phone}" name="phone">
+            
             <button>Save</button>
         </form>
+        </div>
     </div>
+    
+    
 </body>
 
 </html>

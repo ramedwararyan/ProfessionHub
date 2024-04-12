@@ -41,7 +41,7 @@
         <div class="form-content">
           <div class="login-form">
             <div class="title">Login</div>
-            <form action="" th:action="@{/dologin}" method="post">
+            <form action="" th:action="@{/dologin}" method="post" onsubmit="return validateLoginForm()">
               <div class="input-boxes">
                 <div class="input-box">
                   <i class="fas fa-envelope"></i>
@@ -57,7 +57,7 @@
                     required
                   />
                 </div>
-                <div class="text"><a href="#">Forgot password?</a></div>
+               
                 <div class="button input-box">
                   <input type="submit" value="Submit" />
                 </div>
@@ -106,25 +106,45 @@
         </div>
       </div>
     </div>
-    <script>
-		
-		 var username = document.getElementById('username');
+   <script>
+  function validateLoginForm() {
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
 
-    // Function to handle input event
-    function handleInput() {
-      // Get the value from the input field
-      var username = username.value;
-
-      // Store the username in localStorage
-      localStorage.setItem('username', username);
+    if (username.trim() === '') {
+      alert('Please enter your email');
+      return false;
     }
 
-    // Attach an input event listener to the input field
-    username.addEventListener('input', handleInput);
-		
-		
+    if (password.trim() === '') {
+      alert('Please enter your password');
+      return false;
+    }
 
+    return true;
+  }
 
-	</script>
+  function validateSignupForm() {
+    var fullname = document.getElementById('fullname').value;
+    var email = document.getElementById('email').value;
+    var password = document.getElementById('password').value;
+
+    if (fullname.trim() === '') {
+      alert('Please enter your name');
+      return false;
+    }
+
+    if (email.trim() === '') {
+      alert('Please enter your email');
+      return false;
+    }
+
+    if (password.trim() === '') {
+      alert('Please enter your password');
+      return false;
+    }
+
+    return true;
+  }</script>
   </body>
 </html>

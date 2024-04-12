@@ -18,10 +18,10 @@
             <!-- Reply button -->
             <form th:action="@{/questions/reply}" method="get">
                 <input type="hidden" name="questionId" th:value="${question.questionId}" />
-                <button type="submit">Reply</button>
+                <button type="submit">Answer</button>
                 
             </form>
-             <a th:href="@{/questions/answers(questionId=${question.questionId})}">Show Answers</a>
+             <a th:href="@{/questions/answers(questionId=${question.questionId})}">All Answers</a>
         </div>
     </div>
 
